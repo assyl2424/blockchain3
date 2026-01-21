@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SimpleStorage dApp | Part 2A</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>SimpleStorage dApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Ethers v6 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.umd.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <h1>SimpleStorage dApp</h1>
+    
 
-    <div class="container">
-        <h1>deApp</h1>
-        
+    <button id="connectBtn">Connect Wallet</button>
 
-        <button id="connectBtn">Connect Wallet</button>
-
-        <div class="info">
-            <p><strong>Account:</strong></p>
-            <p id="account">Not connected</p>
-
-            <p><strong>Stored Number:</strong></p>
-            <p id="number">-</p>
-        </div>
+    <div class="info">
+      <p><strong>Account:</strong></p>
+      <span id="account">Not connected</span>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/ethers@6.8.1/dist/ethers.umd.min.js"></script>
-    <script src="app.js"></script>
+    <div class="info">
+      <p><strong>Stored Number:</strong></p>
+      <span id="storedNumber">-</span>
+    </div>
 
+    <div class="set-box">
+      <input
+        id="numberInput"
+        type="number"
+        placeholder="Enter new number"
+      />
+      <button id="setBtn">Set Number</button>
+    </div>
+  </div>
+
+  <!-- App logic -->
+  <script src="app.js"></script>
 </body>
 </html>
